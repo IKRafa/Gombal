@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Gombal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://images3.alphacoders.com/135/1350069.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        #gombal {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        #gombalButton {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #gombalButton:hover {
+            background-color: #0056b3;
+        }
+        .copyright {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.8em;
+            color: #ccc; /* Warna abu-abu */
+            background: rgba(0, 0, 0, 0.6); /* Background semi-transparan untuk teks copyright */
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .license {
+    position: fixed;
+    bottom: 30px; /* Jarak dari teks copyright */
+    right: 10px;
+    font-size: 0.8em;
+    color: #ccc; /* Warna abu-abu */
+    background: rgba(0, 0, 0, 0.6); /* Background semi-transparan untuk teks lisensi */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="gombal">Klik tombol di bawah untuk mendapatkan gombalan!</div>
+        <a id="gombalButton" href="#" onclick="changeGombal(); return false;">Dapatkan Gombalan</a>
+    </div>
+
+    <div class="copyright">copyraid ByRafa</div>
+
+    <div class="license">Lisensi: MIT License</div>
+
+    <script>
+        const gombals = [
+            "Kamu itu kayak sinar matahari, selalu membuat hariku lebih cerah.",
+"Kalau kamu bintang, aku mau jadi langitnya, biar bisa selalu di sampingmu.",
+"Kamu pasti penyihir, soalnya setiap kali aku melihatmu, hatiku jadi berdebar.",
+"Kamu kayak es krim, manis dan bikin aku pengen terus-terusan ada di dekatmu.",
+"Aku tahu kita belum lama kenal, tapi rasanya aku udah lama jatuh cinta sama kamu.",
+"Kamu adalah alasan aku tersenyum setiap hari.",
+"Kalau aku bisa memutar waktu, aku pengen bertemu denganmu lebih cepat.",
+"Kamu itu kayak wifi, setiap kali dekat sama kamu, aku merasa lebih baik.",
+"Kamu lebih dari sekadar impian, kamu adalah kenyataan terindah dalam hidupku.",
+"Berada di dekatmu seperti berada di tempat paling nyaman di dunia.",
+"Kamu bikin aku lupa waktu, karena setiap detik bersamamu sangat berharga.",
+"Kalau cinta itu sebuah perjalanan, maka kamu adalah tujuan akhir yang aku cari.",
+"Aku bisa menghabiskan waktu seharian hanya untuk melihat senyummu.",
+"Kamu seperti cuaca cerah, membuat hari-hariku lebih indah.",
+"Sejak kamu masuk ke hidupku, segala sesuatu menjadi lebih berarti.",
+"Kamu tahu nggak? Kamu membuat hatiku berdebar setiap kali kamu ada di dekatku.",
+"Hanya dengan melihatmu, aku merasa lebih bahagia dari sebelumnya.",
+"Kamu adalah kebahagiaan yang tak pernah kuharapkan tapi sangat kuinginkan.",
+"Kamu itu kayak mimpi indah yang ingin aku terus rasakan.",
+"Setiap kali kamu berbicara, aku merasa seperti mendapat hadiah.",
+"Kamu itu seperti magnet, selalu menarik perhatianku.",
+"Kamu membuatku merasa seperti aku adalah orang yang paling beruntung di dunia.",
+"Kalau kamu adalah lagu, aku akan memutarnya terus-menerus.",
+"Aku tak perlu alasan untuk mencintaimu, karena kamu adalah alasan itu sendiri.",
+"Kamu adalah puzzle yang sempurna dalam hidupku yang belum lengkap.",
+"Mungkin aku bukan orang terbaik, tapi aku ingin menjadi yang terbaik untukmu.",
+"Kamu adalah sinar terang di hidupku yang selalu kuharapkan.",
+"Saat aku bersamamu, waktu terasa begitu cepat berlalu.",
+"Aku merasa seperti menemukan bagian diriku yang hilang ketika aku bersamamu.",
+"Kamu lebih dari sekadar bintang di langit malamku, kamu adalah galaksi seluruhnya.",
+"Kamu membuatku merasa nyaman seperti berada di rumah sendiri.",
+"Kalau aku bisa memilih satu hal untuk dilakukan selamanya, itu adalah mencintaimu.",
+"Kamu adalah sebab aku tidak bisa berhenti tersenyum.",
+"Ketika aku bersamamu, dunia seakan berhenti sejenak dan hanya ada kita berdua.",
+"Kamu seperti pelangi setelah hujan, datang dengan keindahan yang membuatku terpesona.",
+"Setiap detik bersamamu adalah momen berharga yang aku syukuri.",
+"Kamu seperti lukisan indah yang selalu ingin kuperhatikan setiap hari.",
+"Kamu adalah senyuman di wajahku dan kebahagiaan di hatiku.",
+"Kalau aku bisa menggambar cinta, gambarnya pasti adalah wajahmu.",
+"Kamu adalah matahari yang menyinari hari-hariku.",
+"Berada di sampingmu seperti berada di tempat yang paling aman di dunia.",
+"Kamu adalah keajaiban yang tak pernah ku duga akan datang ke dalam hidupku.",
+"Kalau aku bisa memilih satu orang untuk menghabiskan sisa hidupku, itu adalah kamu.",
+"Kamu adalah alasan mengapa aku selalu merasa bersemangat setiap hari.",
+"Setiap kali kamu tersenyum, aku merasa seakan dunia menjadi lebih baik.",
+"Kamu adalah kebahagiaan yang tak pernah ku bayangkan sebelumnya.",
+"Kalau kamu adalah mimpi, aku tidak pernah ingin terbangun.",
+"Kamu adalah keindahan yang menyejukkan mata dan hati.",
+"Aku merasa seperti menemukan rumah yang hilang ketika aku bersamamu.",
+"Kamu seperti angin sepoi-sepoi yang menyegarkan hatiku.",
+"Berada di dekatmu membuatku merasa seperti di tempat yang paling nyaman di dunia.",
+"Kamu adalah alasan aku selalu merasa bahagia dan bersyukur.",
+"Kalau kamu adalah bintang, aku ingin menjadi langit yang selalu bisa melihatmu.",
+"Kamu adalah sinar yang menerangi jalan hidupku.",
+"Ketika aku bersamamu, segala sesuatu terasa lebih indah dan penuh warna.",
+"Kamu adalah impian yang menjadi kenyataan.",
+"Kalau kamu adalah puisi, aku akan membaca setiap barisnya dengan penuh rasa.",
+"Kamu adalah kisah cinta yang ingin aku tulis dan ceritakan setiap hari.",
+"Berada di dekatmu seperti berada di tempat yang penuh dengan keajaiban.",
+"Kamu adalah alasan aku selalu merasa bahagia dan bersyukur.",
+"Kamu seperti secangkir kopi hangat di pagi hari, selalu membuatku merasa lebih baik.",
+"Kalau aku bisa mengulang waktu, aku akan memilih setiap detik bersamamu.",
+"Kamu adalah kebahagiaan yang tak ternilai harganya.",
+"Setiap momen bersamamu adalah hadiah yang sangat berharga bagiku.",
+"Kamu adalah nyala api yang selalu membuatku merasa hangat di malam yang dingin.",
+"Kalau kamu adalah bunga, kamu adalah bunga yang paling indah di taman hatiku.",
+"Kamu adalah suara lembut yang selalu menenangkan hatiku.",
+"Ketika aku bersamamu, segala kesulitan seakan hilang begitu saja.",
+"Kamu adalah mimpi indah yang aku harap tak pernah berakhir.",
+"Kalau aku bisa memilih satu orang untuk mencintai, itu adalah kamu.",
+"Kamu adalah keindahan yang selalu kuinginkan dalam hidupku.",
+"Berada di dekatmu seperti berada di tempat yang paling damai di dunia.",
+"Kamu adalah senyuman yang selalu membuatku merasa lebih baik.",
+"Kalau kamu adalah hari, kamu adalah hari-hari terbaik dalam hidupku.",
+"Kamu adalah kebahagiaan yang selalu ku cari dan ku temukan di setiap detik bersamamu.",
+"Setiap kali aku melihatmu, aku merasa seperti menemukan harta karun yang berharga.",
+"Kamu adalah lagu yang selalu ingin aku putar di hatiku.",
+"Kalau kamu adalah bintang, kamu adalah bintang yang paling bersinar di langit malamku.",
+"Kamu adalah keajaiban yang selalu membuatku merasa bersyukur.",
+"Ketika aku bersamamu, aku merasa seperti di tempat yang paling aman dan nyaman di dunia.",
+"Kamu adalah alasan mengapa aku selalu tersenyum dan merasa bahagia.",
+"Kalau kamu adalah puisi, aku akan membacanya berulang-ulang dengan penuh rasa.",
+"Kamu adalah bagian dari hidupku yang membuat segala sesuatu lebih berarti.",
+"Setiap detik bersamamu adalah momen yang sangat berharga dan indah.",
+"Kamu adalah bunga yang selalu mekar dalam hatiku.",
+"Kalau kamu adalah perjalanan, aku ingin terus melanjutkannya bersamamu.",
+"Kamu adalah kebahagiaan yang selalu kuinginkan dan ku cari.",
+"Ketika aku bersamamu, dunia seakan menjadi lebih indah dan penuh warna.",
+"Kamu adalah mimpi indah yang menjadi kenyataan.",
+"Kalau kamu adalah lagu, kamu adalah lagu yang selalu membuatku merasa bahagia.",
+"Kamu adalah keindahan yang selalu kuinginkan dalam hidupku."
+        ];
+
+        let currentIndex = -1;
+
+        function changeGombal() {
+            currentIndex = (currentIndex + 1) % gombals.length;
+            document.getElementById('gombal').innerText = gombals[currentIndex];
+        }
+    </script>
+</body>
+</html>
